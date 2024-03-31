@@ -18,7 +18,7 @@ export default function HomePage() {
     }
     return (
       <>
-        <SearchMovie />
+        <SearchMovie isJustWinners={false} />
         <Movies />
       </>
     );

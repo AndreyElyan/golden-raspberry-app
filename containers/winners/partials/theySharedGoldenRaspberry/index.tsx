@@ -21,8 +21,12 @@ export default function TheySharedGoldenRaspberry() {
   }, [addManyWinnersInTheSameYear, setLoading]);
 
   React.useEffect(() => {
-    fetchWinnersInTheSameYear();
-  }, [addManyWinnersInTheSameYear, fetchWinnersInTheSameYear]);
+    if (winnersInTheSameYear.length <= 0) fetchWinnersInTheSameYear();
+  }, [
+    addManyWinnersInTheSameYear,
+    fetchWinnersInTheSameYear,
+    winnersInTheSameYear,
+  ]);
 
   return (
     <div>

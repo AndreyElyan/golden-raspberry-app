@@ -9,7 +9,11 @@ import { getMovies, getMoviesBySearch } from "@/app/api";
 import { useDebounce } from "use-debounce";
 import { useMovieStore } from "@/store/zustand";
 
-export default function SearchMovie() {
+interface SearchMovieProps {
+  isJustWinners: boolean;
+}
+
+export default function SearchMovie({ isJustWinners }: SearchMovieProps) {
   const { addManyMovies, movies, setLoading } = useMovieStore();
   const [search, setSearch] = React.useState("");
   const [selectedYear, setSelectedYear] = React.useState("");
