@@ -1,11 +1,11 @@
 import styled from "styled-components";
 import { Input as InputComponent } from "@/components/ui/input";
 
-export const Container = styled.div`
+export const WrapperInput = styled.div`
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 30px;
   margin-bottom: 10px;
 `;
 

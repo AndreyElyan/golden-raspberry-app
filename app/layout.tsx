@@ -26,8 +26,10 @@ export default function RootLayout({
           fontSans.className,
         )}
       >
-        <NavigationMenu />
-        <main className="flex flex-col items-center">{children}</main>
+        <main className="flex flex-col items-center">
+          <NavigationMenu />
+          {children}
+        </main>
       </body>
     </html>
   );

@@ -11,6 +11,6 @@ type State = {
 export const useMovieStore = create<State>((set) => ({
   movies: [],
   addManyMovies: (movie) => set((state) => ({ movies: movie })),
-  loading: true,
+  loading: false,
   setLoading: (loading) => set((state) => ({ loading })),
 }));

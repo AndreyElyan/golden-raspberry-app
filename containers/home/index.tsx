@@ -8,16 +8,7 @@ import { useMovieStore } from "@/store/zustand";
 import Loader from "@/components/ui/loader";
 
 export default function HomePage() {
-  const { addManyMovies, loading, movies } = useMovieStore();
-
-  const handleGetMovies = useCallback(async () => {
-    const response = await getMovies({ year: "2019" });
-    addManyMovies(response);
-  }, [addManyMovies]);
-
-  useEffect(() => {
-    if (!movies.length) handleGetMovies();
-  }, [handleGetMovies, movies.length]);
+  const { loading } = useMovieStore();
 
   const renderMovies = () => {
     if (loading) {

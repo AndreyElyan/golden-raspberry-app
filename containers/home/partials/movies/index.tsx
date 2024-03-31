@@ -19,7 +19,9 @@ export default function Movies() {
             studio={data.studios}
           />
         )}
-        ListEmptyComponent={() => <p>Nenhum filme encontrado</p>}
+        ListEmptyComponent={() => (
+          <p className="text-white mt-8">{"Nenhum filme encontrado :("}</p>
+        )}
       />
     </>
   );
