@@ -1,6 +1,6 @@
 import api from "./api";
 
-export const getMovieByYear = async (year: number) => {
+export const getWinnersMovieByYear = async (year: number) => {
   try {
     const response = await api.get(`/movies/winners-by-year/${year}`);
     return response.data;

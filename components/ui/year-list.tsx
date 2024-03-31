@@ -1,17 +1,16 @@
-"use client";
 import React from "react";
 
-const years = Array.from({ length: 2024 - 1980 + 1 }, (_, i) =>
-  (1980 + i).toString(),
-);
+interface YearListProps {
+  selectedYear?: string;
+  years: string[];
+  handleYearClick?: () => void;
+}
 
-const YearList = () => {
-  const [selectedYear, setSelectedYear] = React.useState("");
-
-  const handleYearClick = (year: string) => {
-    setSelectedYear(year);
-  };
-
+const YearList = ({
+  selectedYear,
+  handleYearClick = () => {},
+  years = [],
+}: YearListProps) => {
   const yearTextColor = (year: string) =>
     selectedYear === year ? "text-green-500" : "text-gray-500";
 
@@ -27,7 +26,7 @@ const YearList = () => {
     >
       {years.map((year) => (
         <div
-          onClick={() => handleYearClick(year)}
+          onClick={() => handleYearClick()}
           className={`hover:text-gray-700 text-gray-500 cursor-pointer ${yearTextColor(
             year,
           )} `}
