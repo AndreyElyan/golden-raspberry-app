@@ -2,6 +2,7 @@ import { BannerMovies } from "@/components/ui/banner-movies";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import MovieCard from "@/components/ui/movie-card";
+import Title from "@/components/ui/title";
 import YearList from "@/components/ui/year-list";
 
 export default function Home() {
@@ -13,9 +14,10 @@ export default function Home() {
         type="search"
         placeholder="Pesquise por um nome"
       />
-      <h1 className="text-2xl pt-6 text-white font-semibold">
-        Encontre Os Piores Filmes
-      </h1>
+      <Title
+        title=" Encontre Os Piores Filmes"
+        className="text-2xl pt-6 text-white font-semibold"
+      />
       <YearList />
 
       <h1 className="text-lg pt-6 text-white">Pesquisado por: 2019</h1>
