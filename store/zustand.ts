@@ -1,4 +1,4 @@
-import { MoviesResponse } from "@/types/Movies";
+import { MoviesResponse, WinnersEntity } from "@/types/Movies";
 import { create } from "zustand";
 
 type State = {
@@ -6,6 +6,8 @@ type State = {
   loading: boolean;
   setLoading: (loading: boolean) => void;
   addManyMovies: (movie: MoviesResponse[]) => void;
+  winnersInTheSameYear: WinnersEntity[];
+  addManyWinnersInTheSameYear: (winners: WinnersEntity[]) => void;
 };
 
 export const useMovieStore = create<State>((set) => ({
@@ -13,4 +15,7 @@ export const useMovieStore = create<State>((set) => ({
   addManyMovies: (movie) => set((state) => ({ movies: movie })),
   loading: false,
   setLoading: (loading) => set((state) => ({ loading })),
+  winnersInTheSameYear: [],
+  addManyWinnersInTheSameYear: (winners) =>
+    set((state) => ({ winnersInTheSameYear: winners })),
 }));

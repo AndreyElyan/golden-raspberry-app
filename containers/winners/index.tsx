@@ -7,35 +7,17 @@ import Title from "@/components/ui/title";
 import YearList from "@/components/ui/year-list";
 import { years } from "@/utils/years";
 import React from "react";
+import TheySharedGoldenRaspberry from "./partials/theySharedGoldenRaspberry";
 
 const Winners = () => {
   const [selectedYear, setSelectedYear] = React.useState("");
   return (
     <div>
-      <Title
-        className="text-xl"
-        title="Compartilharam o Framboesa de Ouro de Pior Filme do Ano"
-      />
-      <MovieCard
-        title="Fantastic Four"
-        studio="20th Century Fox"
-        producers="Simon Kinberg, Matthew Vaughn, Hutch Parker, Robert Kulzar"
-        winner
-        year="2015"
-      />
-      <MovieCard
-        title="Fifty Shades of Grey"
-        studio="Focus Features"
-        producers="Michael De Luca, E. L. James, Dana Brunetti"
-        winner
-        year="2015"
-      />
-
+      <TheySharedGoldenRaspberry />
       <Title
         className="text-xl"
         title="Os Estúdios Que Mais Ganham o Framboesa de Ouro"
       />
-
       <Card className="flex flex-row w-full justify-between">
         <Title title="Columbia Pictures" />
         <div className="flex flex-row">
