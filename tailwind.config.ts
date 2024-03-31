@@ -27,6 +27,7 @@ const config = {
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
+        movieCard: "#17242A",
         foreground: "hsl(var(--foreground))",
         primary: {
           DEFAULT: "#12191C",
