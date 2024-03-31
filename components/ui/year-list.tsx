@@ -3,17 +3,10 @@ import React from "react";
 interface YearListProps {
   selectedYear?: string;
   years: string[];
-  handleYearClick?: () => void;
+  onYearClick: (year: string) => void;
 }
 
-const YearList = ({
-  selectedYear,
-  handleYearClick,
-  years = [],
-}: YearListProps) => {
-  const yearTextColor = (year: string) =>
-    selectedYear === year ? "text-green-500" : "text-gray-500";
-
+const YearList = ({ selectedYear, years = [], onYearClick }: YearListProps) => {
   return (
     <div
       className="
@@ -21,15 +14,16 @@ const YearList = ({
       grid-cols-12
       gap-2
       mt-6
-     
     "
     >
       {years.map((year) => (
         <div
-          onClick={handleYearClick && handleYearClick}
-          className={`hover:text-gray-700 text-gray-500 cursor-pointer ${yearTextColor(
-            year,
-          )} `}
+          onClick={() => onYearClick(year)}
+          className={`hover:text-gray-700 text-gray-500 cursor-pointer ${
+            selectedYear === year
+              ? "text-green-500 font-semibold hover:text-green-700"
+              : ""
+          }`}
           key={year}
         >
           {year}

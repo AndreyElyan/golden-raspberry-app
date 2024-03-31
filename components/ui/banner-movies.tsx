@@ -8,8 +8,7 @@ export const BannerMovies = () => {
       className="rounded-3xl shadow-xl"
       alt="Banner with movies"
       priority
-      width={1040}
-      height={427}
+      width={700}
     />
   );
 };

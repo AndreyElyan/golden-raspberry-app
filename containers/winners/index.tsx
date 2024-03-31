@@ -1,3 +1,4 @@
+"use client";
 import Card from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import MovieCard from "@/components/ui/movie-card";
@@ -8,6 +9,7 @@ import { years } from "@/utils/years";
 import React from "react";
 
 const Winners = () => {
+  const [selectedYear, setSelectedYear] = React.useState("");
   return (
     <div>
       <Title
@@ -122,7 +124,10 @@ const Winners = () => {
         title=" Encontre Os Piores Filmes"
         className="text-2xl pt-6 text-white font-semibold"
       />
-      <YearList years={years} />
+      <YearList
+        years={years}
+        onYearClick={setSelectedYear}
+      />
 
       <h1 className="text-lg pt-6 text-white">Pesquisado por: 2019</h1>
 

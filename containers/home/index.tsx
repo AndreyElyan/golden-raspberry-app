@@ -1,7 +1,5 @@
 "use client";
 import { BannerMovies } from "@/components/ui/banner-movies";
-import { useCallback, useEffect, useState } from "react";
-import { getMovies } from "@/app/api";
 import SearchMovie from "./partials/search-movie";
 import Movies from "./partials/movies";
 import { useMovieStore } from "@/store/zustand";

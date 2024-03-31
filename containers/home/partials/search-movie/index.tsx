@@ -1,17 +1,18 @@
 import React, { useRef } from "react";
-import styled from "styled-components";
+import { FaSearch } from "react-icons/fa";
 
 import Title from "@/components/ui/title";
 import YearList from "@/components/ui/year-list";
 import { years } from "@/utils/years";
 import { StyledInput, WrapperInput } from "./styles";
-import { getMoviesBySearch } from "@/app/api";
+import { getMovies, getMoviesBySearch } from "@/app/api";
 import { useDebounce } from "use-debounce";
 import { useMovieStore } from "@/store/zustand";
 
 export default function SearchMovie() {
-  const { loading, addManyMovies, movies } = useMovieStore();
+  const { addManyMovies, movies, setLoading } = useMovieStore();
   const [search, setSearch] = React.useState("");
+  const [selectedYear, setSelectedYear] = React.useState("");
   const [query] = useDebounce(search, 750);
 
   const searchRef = useRef("");
@@ -19,11 +20,22 @@ export default function SearchMovie() {
   React.useEffect(() => {
     if (query) {
       searchRef.current = query;
+      setLoading(true);
       getMoviesBySearch(query).then((data) => {
         addManyMovies(data);
       });
+
+      return () => {
+        setLoading(false);
+      };
     }
-  }, [query, addManyMovies]);
+  }, [query, addManyMovies, setLoading]);
+
+  const handleYearClick = async (year: string) => {
+    setSelectedYear(year);
+    const movies = await getMovies({ year });
+    addManyMovies(movies);
+  };
 
   return (
     <div className="flex flex-col w-full">
@@ -40,11 +52,15 @@ export default function SearchMovie() {
         />
       </WrapperInput>
 
-      <YearList years={years} />
+      <YearList
+        onYearClick={handleYearClick}
+        selectedYear={selectedYear}
+        years={years}
+      />
 
-      {movies && movies.length > 0 && (
+      {selectedYear && movies.length > 0 && (
         <Title
-          title={`Pesquisado por: ${search}`}
+          title={`Pesquisado por: ${selectedYear}`}
           className="text-xl mt-6 text-white font-semibold"
         />
       )}
