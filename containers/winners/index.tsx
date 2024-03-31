@@ -37,11 +37,14 @@ const Winners = () => {
       <Card className="flex flex-row w-full justify-between">
         <Title title="Columbia Pictures" />
         <div className="flex flex-row">
-          <Text text="Estúdio com" />
-          <span className="text-gray-600 mr-2 ml-2">|</span>
           <Text
-            className="text-green-700"
-            text="7 indicações"
+            className="text-white"
+            text="Estúdio com"
+          />
+          <p className="text-gray-300 mr-2 ml-2">|</p>
+          <Text
+            className="text-green-500 ml-2"
+            text="6 indicações"
           />
         </div>
       </Card>
@@ -49,11 +52,14 @@ const Winners = () => {
       <Card className="flex flex-row w-full justify-between mt-4">
         <Title title="Paramount Pictures" />
         <div className="flex flex-row">
-          <Text text="Estúdio com" />
-          <span className="text-gray-600 mr-2 ml-2">|</span>
           <Text
-            className="text-green-700"
-            text="7 indicações"
+            className="text-white"
+            text="Estúdio com"
+          />
+          <p className="text-gray-300 mr-2 ml-2">|</p>
+          <Text
+            className="text-green-500 ml-2"
+            text="6 indicações"
           />
         </div>
       </Card>
@@ -61,11 +67,14 @@ const Winners = () => {
       <Card className="flex flex-row w-full justify-between mt-4">
         <Title title="Warner Bros" />
         <div className="flex flex-row">
-          <Text text="Estúdio com" />
-          <span className="text-gray-600 mr-2 ml-2">|</span>
           <Text
-            className="text-green-700"
-            text="7 indicações"
+            className="text-white"
+            text="Estúdio com"
+          />
+          <p className="text-gray-300 mr-2 ml-2">|</p>
+          <Text
+            className="text-green-500 ml-2"
+            text="6 indicações"
           />
         </div>
       </Card>
@@ -77,10 +86,13 @@ const Winners = () => {
       <Card className="flex flex-row w-full justify-between mt-4">
         <Title title="Matthew Vaughn" />
         <div className="flex flex-row">
-          <Text text="Foi o produtor com o maior intervalo de" />
-          <span className="text-gray-600 mr-2 ml-2">|</span>
           <Text
-            className="text-green-700"
+            className="text-white"
+            text="Foi o produtor com o maior intervalo de"
+          />
+          <p className="text-gray-300 mr-2 ml-2">|</p>
+          <Text
+            className="text-green-500 ml-2"
             text="2002 até 2015"
           />
         </div>
@@ -89,10 +101,13 @@ const Winners = () => {
       <Card className="flex flex-row w-full justify-between mt-4">
         <Title title="Joel Silver" />
         <div className="flex flex-row">
-          <Text text="Foi o produtor com o menor intervalo de" />
-          <span className="text-gray-600 mr-2 ml-2">|</span>
           <Text
-            className="text-green-700"
+            className="text-white"
+            text="Foi o produtor com o menor intervalo de"
+          />
+          <p className="text-gray-300 mr-2 ml-2">|</p>
+          <Text
+            className="text-green-500 ml-2"
             text="1990 até 1991"
           />
         </div>

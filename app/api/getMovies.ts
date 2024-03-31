@@ -1,3 +1,4 @@
+import { MoviesResponse } from "@/types/Movies";
 import api from "./api";
 
 interface MovieRequest {
@@ -15,7 +16,7 @@ export const getMovies = async ({
   title,
   winner,
   year,
-}: MovieRequest) => {
+}: MovieRequest): Promise<MoviesResponse[]> => {
   try {
     const response = await api.post(`/movies`, {
       year,
@@ -29,5 +30,6 @@ export const getMovies = async ({
     return response.data;
   } catch (error) {
     console.error(error);
+    throw error;
   }
 };

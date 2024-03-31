@@ -1,12 +1,11 @@
 import React from "react";
 
-interface TextProps {
+interface TextProps extends React.HTMLProps<HTMLSpanElement> {
   text: string;
-  className?: string;
 }
 
 const Text = ({ text, className }: TextProps) => {
-  return <h1 className={` text-white ${className}`}>{text}</h1>;
+  return <span className={` ${className}`}>{text}</span>;
 };
 
 export default Text;

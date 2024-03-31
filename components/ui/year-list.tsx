@@ -8,7 +8,7 @@ interface YearListProps {
 
 const YearList = ({
   selectedYear,
-  handleYearClick = () => {},
+  handleYearClick,
   years = [],
 }: YearListProps) => {
   const yearTextColor = (year: string) =>
@@ -26,7 +26,7 @@ const YearList = ({
     >
       {years.map((year) => (
         <div
-          onClick={() => handleYearClick()}
+          onClick={handleYearClick && handleYearClick}
           className={`hover:text-gray-700 text-gray-500 cursor-pointer ${yearTextColor(
             year,
           )} `}

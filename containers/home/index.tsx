@@ -1,48 +1,30 @@
 "use client";
 import { BannerMovies } from "@/components/ui/banner-movies";
-import { Input } from "@/components/ui/input";
-import MovieCard from "@/components/ui/movie-card";
-import Title from "@/components/ui/title";
-import YearList from "@/components/ui/year-list";
-import { getWinnersMovieByYear } from "@/app/api/getMovieByYear";
-import { useEffect } from "react";
-import { years } from "@/utils/years";
+import { useCallback, useEffect } from "react";
+import { getMovies } from "@/app/api";
+import SearchMovie from "./partials/search-movie";
+import Movies from "./partials/movies";
+import { useMovieStore } from "@/store/zustand";
 
 export default function HomePage() {
+  const { addManyMovies, movies } = useMovieStore();
+
+  const handleGetMovies = useCallback(async () => {
+    const response = await getMovies({ year: "2019" });
+    addManyMovies(response);
+  }, [addManyMovies]);
+
   useEffect(() => {
-    getWinnersMovieByYear(2019);
-  }, []);
+    if (movies.length === 0) {
+      handleGetMovies();
+    }
+  }, [movies, handleGetMovies]);
 
   return (
     <div>
       <BannerMovies />
-      <Input
-        className="mt-6"
-        type="search"
-        placeholder="Pesquise por um nome"
-      />
-      <Title
-        title=" Encontre Os Piores Filmes"
-        className="text-2xl pt-6 text-white font-semibold"
-      />
-      <YearList years={years} />
-
-      <h1 className="text-lg pt-6 text-white">Pesquisado por: 2019</h1>
-
-      <MovieCard
-        title="Cats"
-        studio="Universal Pictures"
-        producers="Debra Hayward, Tim Bevan, Eric Fellner, Tom Hooper"
-        winner
-        year="2019"
-      />
-      <MovieCard
-        title="The Fanatic"
-        studio="Quiver Distribution"
-        producers="Oscar Generale, Daniel Grodnik, Luillo Ruiz"
-        winner={false}
-        year="2019"
-      />
+      <SearchMovie />
+      <Movies />
     </div>
   );
 }
