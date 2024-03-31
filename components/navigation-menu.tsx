@@ -16,7 +16,7 @@ export default function NavigationMenu() {
       flex-col
       px-8
       py-6
-      bg-gray-800
+      bg-primary
       text-white
       leading-10
     "
@@ -26,14 +26,14 @@ export default function NavigationMenu() {
         <Button
           size="lg"
           onClick={() => console.log("searchParams")}
-          className="mr-4 rounded-xl w-60 "
+          className="mr-4 rounded-xl w-60 bg-green-700"
         >
           Movies
         </Button>
         <Button
           size="lg"
           onClick={() => console.log("searchParams")}
-          className="mr-4 rounded-xl w-60 h-12"
+          className="mr-4 rounded-xl w-60 h-12 bg-secondary"
         >
           Winners
         </Button>
