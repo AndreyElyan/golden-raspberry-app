@@ -22,12 +22,12 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          "min-h-screen bg-primary antialiased",
+          "min-h-screen bg-primary antialiased mx-auto px-4 sm:px-6 lg:px-8",
           fontSans.className,
         )}
       >
         <NavigationMenu />
-        <main>{children}</main>
+        <main className="flex flex-col items-center">{children}</main>
       </body>
     </html>
   );

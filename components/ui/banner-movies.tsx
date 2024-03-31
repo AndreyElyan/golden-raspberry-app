@@ -5,7 +5,7 @@ export const BannerMovies = () => {
   return (
     <Image
       src={BannerImage}
-      className="rounded-3xl shadow-xl "
+      className="rounded-3xl shadow-xl"
       alt="Banner with movies"
       priority
       width={1040}

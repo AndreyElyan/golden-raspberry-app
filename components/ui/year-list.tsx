@@ -21,7 +21,7 @@ const YearList = ({
       grid-cols-12
       gap-2
       mt-6
-      text-center
+     
     "
     >
       {years.map((year) => (

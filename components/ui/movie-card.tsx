@@ -34,6 +34,7 @@ const MovieCard: React.FC<MovieCardProps> = ({
       flex-col
       justify-between
       h-full
+      w-full
     "
     >
       <div>

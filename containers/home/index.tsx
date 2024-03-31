@@ -8,7 +8,7 @@ import { useMovieStore } from "@/store/zustand";
 import Loader from "@/components/ui/loader";
 
 export default function HomePage() {
-  const { addManyMovies, loading } = useMovieStore();
+  const { addManyMovies, loading, movies } = useMovieStore();
 
   const handleGetMovies = useCallback(async () => {
     const response = await getMovies({ year: "2019" });
@@ -16,8 +16,8 @@ export default function HomePage() {
   }, [addManyMovies]);
 
   useEffect(() => {
-    handleGetMovies().finally(() => {});
-  }, [handleGetMovies]);
+    if (!movies.length) handleGetMovies();
+  }, [handleGetMovies, movies.length]);
 
   const renderMovies = () => {
     if (loading) {
@@ -36,7 +36,7 @@ export default function HomePage() {
   };
 
   return (
-    <div>
+    <div className="flex flex-col items-center">
       <BannerMovies />
       {renderMovies()}
     </div>

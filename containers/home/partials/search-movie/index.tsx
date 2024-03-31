@@ -1,23 +1,31 @@
-import { Input } from "@/components/ui/input";
+import React from "react";
+import styled from "styled-components";
+import { Input as InputComponent } from "@/components/ui/input";
 import Title from "@/components/ui/title";
 import YearList from "@/components/ui/year-list";
 import { years } from "@/utils/years";
+import { Container, StyledInput } from "./styles";
 
 export default function SearchMovie() {
   return (
-    <>
-      <Input
-        className="mt-6"
-        type="search"
-        placeholder="Pesquise por um nome"
-      />
+    <div className="flex flex-col w-full">
+      <Container>
+        <StyledInput
+          type="search"
+          placeholder="Pesquise por um nome"
+        />
+      </Container>
+
       <Title
         title=" Encontre Os Piores Filmes"
-        className="text-2xl pt-6 text-white font-semibold"
+        className="text-2xl mt-6 text-white font-semibold"
       />
       <YearList years={years} />
 
-      <h1 className="text-lg pt-6 text-white">Pesquisado por: 2019</h1>
-    </>
+      <Title
+        title="Pesquisado por: 2019"
+        className="text-xl mt-6 text-white font-semibold"
+      />
+    </div>
   );
 }
