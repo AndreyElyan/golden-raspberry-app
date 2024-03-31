@@ -39,8 +39,8 @@ const MovieCard: React.FC<MovieCardProps> = ({
     >
       <div>
         <h3 className="text-lg text-white font-semibold">{title}</h3>
-        <p className="text-sm text-gray-200 mt-1">{`Estúdio: ${studio}`}</p>
-        <p className="text-sm text-gray-200 mt-1">{`Produtores: ${producers}`}</p>
+        <p className="text-sm text-gray-200 mt-1">{`Studio: ${studio}`}</p>
+        <p className="text-sm text-gray-200 mt-1">{`Producers: ${producers}`}</p>
       </div>
       <div className="flex justify-between items-center mt-4">
         <div
@@ -56,8 +56,8 @@ const MovieCard: React.FC<MovieCardProps> = ({
           />
           <span className="ml-2">
             {winner
-              ? `Vencedor do Pior Filme do Ano de ${year}`
-              : `Indicado para Pior Filme do Ano de ${year}`}
+              ? `Winner of Worst Movie of the Year for ${year}`
+              : `Nominated for Worst Movie of the Year for ${year}`}
           </span>
         </div>
       </div>

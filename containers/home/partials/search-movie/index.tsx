@@ -41,12 +41,12 @@ export default function SearchMovie() {
     <div className="flex flex-col w-full">
       <WrapperInput>
         <Title
-          title=" Encontre Os Piores Filmes"
+          title="Find The Worst Movies"
           className="text-lg text-white font-semibold"
         />
         <StyledInput
           type="search"
-          placeholder="Pesquise por um nome"
+          placeholder="Search by movie name"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />

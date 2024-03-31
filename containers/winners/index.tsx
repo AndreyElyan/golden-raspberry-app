@@ -118,10 +118,10 @@ const Winners = () => {
       <Input
         className="mt-6"
         type="search"
-        placeholder="Pesquise por um nome"
+        placeholder="Search by movie name"
       />
       <Title
-        title=" Encontre Os Piores Filmes"
+        title="Find The Worst Movies"
         className="text-2xl pt-6 text-white font-semibold"
       />
       <YearList
@@ -129,7 +129,7 @@ const Winners = () => {
         onYearClick={setSelectedYear}
       />
 
-      <h1 className="text-lg pt-6 text-white">Pesquisado por: 2019</h1>
+      <h1 className="text-lg pt-6 text-white">Search by: 2019</h1>
 
       <MovieCard
         title="Cats"
