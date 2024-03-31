@@ -1,6 +1,7 @@
 import trophy from "@/public/trophy.svg";
 import winnerTrophy from "@/public/winnerTrophy.svg";
 import Image from "next/image";
+import Card from "./card";
 
 interface MovieCardProps {
   title: string;
@@ -18,7 +19,7 @@ const MovieCard: React.FC<MovieCardProps> = ({
   year,
 }) => {
   return (
-    <div
+    <Card
       className="
       bg-movieCard
       border
@@ -59,7 +60,7 @@ const MovieCard: React.FC<MovieCardProps> = ({
           </span>
         </div>
       </div>
-    </div>
+    </Card>
   );
 };
 
