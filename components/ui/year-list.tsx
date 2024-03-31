@@ -6,9 +6,22 @@ const years = Array.from({ length: 2024 - 1980 + 1 }, (_, i) =>
 
 const YearList = () => {
   return (
-    <div style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
+    <div
+      className="
+      grid
+      grid-cols-12
+      gap-2
+      mt-6
+      text-center
+    "
+    >
       {years.map((year) => (
-        <div key={year}>{year}</div>
+        <div
+          className=" hover:text-gray-700 text-gray-500 cursor-pointer"
+          key={year}
+        >
+          {year}
+        </div>
       ))}
     </div>
   );
