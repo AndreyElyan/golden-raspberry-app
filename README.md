@@ -2,6 +2,20 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
+Before you start, you need to have the following tools installed on your machine:
+
+- [Node.js](https://nodejs.org/en/)
+- [Yarn](https://yarnpkg.com/getting-started/install)
+
+After installing the tools, you need to clone the repository of backend:
+
+Github: [Golden Raspberry Backend](https://github.com/AndreyElyan/golden-raspberry-api/tree/develop)
+
+```bash
+git clone https://github.com/AndreyElyan/golden-raspberry-api.git
+```
+
+````bash
 First, run the development server:
 
 ```bash
@@ -12,7 +26,7 @@ yarn dev
 pnpm dev
 # or
 bun dev
-```
+````
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
@@ -46,14 +60,11 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
   <img width="520" alt="image" src="https://github.com/AndreyElyan/golden-raspberry-app/assets/46023665/73ae70d3-02f2-4356-8bd2-c7d2f7493ef6">
   <img width="376" alt="image" src="https://github.com/AndreyElyan/golden-raspberry-app/assets/46023665/7c16de28-f4df-432a-ab0a-066e6b2bc2d0">
 
-
 Design Responsivo
 
 <img width="498" alt="image" src="https://github.com/AndreyElyan/golden-raspberry-app/assets/46023665/8e64d154-502a-4b6d-a4ca-db76a79f0e1f">
 
 TODO: Mobile First
-
-
 
 ### Dev Profile
 
