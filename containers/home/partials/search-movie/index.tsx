@@ -1,5 +1,4 @@
 import React, { useRef } from "react";
-import { FaSearch } from "react-icons/fa";
 
 import Title from "@/components/ui/title";
 import YearList from "@/components/ui/year-list";
