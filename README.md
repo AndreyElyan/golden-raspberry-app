@@ -41,7 +41,12 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 ## Figma
 
-- [Figma](https://www.figma.com/file/iJa8ViXUuZ20A4bUIoI0y3/Framboesa-de-Ouro?type=design&node-id=1-6&mode=design&t=0gNC9bmQaPSHANo9-0) - Gold Raspberry Design
+- [Figma](https://www.figma.com/file/iJa8ViXUuZ20A4bUIoI0y3/Framboesa-de-Ouro?type=design&node-id=1-6&mode=design&t=0gNC9bmQaPSHANo9-0) - Golden Raspberry Design
+
+  <img width="520" alt="image" src="https://github.com/AndreyElyan/golden-raspberry-app/assets/46023665/73ae70d3-02f2-4356-8bd2-c7d2f7493ef6">
+  <img width="376" alt="image" src="https://github.com/AndreyElyan/golden-raspberry-app/assets/46023665/7c16de28-f4df-432a-ab0a-066e6b2bc2d0">
+
+
 
 ### Dev Profile
 
