@@ -19,3 +19,14 @@ export interface WinnersEntity {
   producers: string;
   winner: string;
 }
+
+export interface MostSuccessfulStudios {
+  studio: string;
+  numberOfVictories: number;
+  winners?: StudiosWinnersEntity[];
+}
+export interface StudiosWinnersEntity {
+  title: string;
+  year: string;
+  producers?: string[];
+}

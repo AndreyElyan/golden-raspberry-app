@@ -62,7 +62,7 @@ export default function SearchMovie({ isJustWinners }: SearchMovieProps) {
         years={years}
       />
 
-      {selectedYear && movies.length > 0 && (
+      {selectedYear && movies && (
         <Title
           title={`Pesquisado por: ${selectedYear}`}
           className="text-xl mt-6 text-white font-semibold"

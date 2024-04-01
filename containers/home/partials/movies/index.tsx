@@ -7,22 +7,24 @@ export default function Movies() {
 
   return (
     <>
-      <FlatList
-        items={movies}
-        RenderItem={({ data }) => (
-          <MovieCard
-            key={data.id}
-            title={data.title}
-            year={data.year}
-            winner={data.winner === "yes"}
-            producers={data.producers}
-            studio={data.studios}
-          />
-        )}
-        ListEmptyComponent={() => (
-          <p className="text-white mt-8">{"Nenhum filme encontrado :("}</p>
-        )}
-      />
+      {movies && (
+        <FlatList
+          items={movies}
+          RenderItem={({ data }) => (
+            <MovieCard
+              key={data.id}
+              title={data.title}
+              year={data.year}
+              winner={data.winner === "yes"}
+              producers={data.producers}
+              studio={data.studios}
+            />
+          )}
+          ListEmptyComponent={() => (
+            <p className="text-white mt-8">{"Nenhum filme encontrado :("}</p>
+          )}
+        />
+      )}
     </>
   );
 }
