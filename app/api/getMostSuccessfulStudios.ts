@@ -1,4 +1,4 @@
-import { MostSuccessfulStudios } from "@/types/Movies";
+import type { MostSuccessfulStudios } from "@/types/Movies";
 import api from "./api";
 
 export const getMostSuccessfulStudios = async (): Promise<

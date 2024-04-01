@@ -4,7 +4,7 @@ import Card from "@/components/ui/card";
 import Text from "@/components/ui/text";
 import Title from "@/components/ui/title";
 import { useMovieStore } from "@/store/zustand";
-import { MostSuccessfulStudios } from "@/types/Movies";
+import type { MostSuccessfulStudios } from "@/types/Movies";
 import { getMostSuccessfulStudios } from "@/app/api/getMostSuccessfulStudios";
 
 export default function MostSuccessfulStudios() {
