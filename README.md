@@ -47,6 +47,13 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
   <img width="376" alt="image" src="https://github.com/AndreyElyan/golden-raspberry-app/assets/46023665/7c16de28-f4df-432a-ab0a-066e6b2bc2d0">
 
 
+Design Responsivo
+
+<img width="498" alt="image" src="https://github.com/AndreyElyan/golden-raspberry-app/assets/46023665/8e64d154-502a-4b6d-a4ca-db76a79f0e1f">
+
+TODO: Mobile First
+
+
 
 ### Dev Profile
 
