@@ -1,5 +1,5 @@
 import Image from "next/image";
-import BannerImage from "@/public/banner-movies.svg";
+import BannerImage from "@/public/banner.svg";
 
 export const BannerMovies = () => {
   return (
