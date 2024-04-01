@@ -14,7 +14,8 @@ interface SearchMovieProps {
 }
 
 export default function SearchMovie({ isJustWinners }: SearchMovieProps) {
-  const { addManyMovies, movies, setLoading } = useMovieStore();
+  const { addManyMovies, movies, setLoading, addManyWinnersMovies } =
+    useMovieStore();
   const [search, setSearch] = React.useState("");
   const [selectedYear, setSelectedYear] = React.useState("");
   const [query] = useDebounce(search, 750);
@@ -37,7 +38,25 @@ export default function SearchMovie({ isJustWinners }: SearchMovieProps) {
 
   const handleYearClick = async (year: string) => {
     setSelectedYear(year);
-    const movies = await getMovies({ year });
+    const bodyToSearchMovies = {
+      winner: {
+        year,
+        winner: true,
+      },
+      defaultSearch: {
+        year,
+        winner: false,
+      },
+    };
+
+    const movies = await getMovies(
+      bodyToSearchMovies[isJustWinners ? "winner" : "defaultSearch"],
+    );
+
+    if (isJustWinners) {
+      return addManyWinnersMovies(movies);
+    }
+
     addManyMovies(movies);
   };
 
@@ -48,12 +67,14 @@ export default function SearchMovie({ isJustWinners }: SearchMovieProps) {
           title="Find The Worst Movies"
           className="text-lg text-white font-semibold"
         />
-        <StyledInput
-          type="search"
-          placeholder="Search by movie name"
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-        />
+        {!isJustWinners && (
+          <StyledInput
+            type="search"
+            placeholder="Search by movie name"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
+        )}
       </WrapperInput>
 
       <YearList
@@ -64,7 +85,7 @@ export default function SearchMovie({ isJustWinners }: SearchMovieProps) {
 
       {selectedYear && movies && (
         <Title
-          title={`Pesquisado por: ${selectedYear}`}
+          title={`Search by: ${selectedYear}`}
           className="text-xl mt-6 text-white font-semibold"
         />
       )}

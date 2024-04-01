@@ -37,10 +37,10 @@ const MovieCard: React.FC<MovieCardProps> = ({
       w-full
     "
     >
-      <div>
+      <div className="max-w-xl">
         <h3 className="text-lg text-white font-semibold">{title}</h3>
         <p className="text-sm text-gray-200 mt-1">{`Studio: ${studio}`}</p>
-        <p className="text-sm text-gray-200 mt-1">{`Producers: ${producers}`}</p>
+        <p className="text-sm text-gray-200 mt-1 break-words">{`Producers: ${producers}`}</p>
       </div>
       <div className="flex justify-between items-center mt-4">
         <div

@@ -14,6 +14,8 @@ type State = {
   addManyWinnersInTheSameYear: (winners: WinnersEntity[]) => void;
   studiosWithMostVictories: MostSuccessfulStudios[];
   addManyStudiosWithMostVictories: (studios: MostSuccessfulStudios[]) => void;
+  winnersMovies: MoviesResponse[];
+  addManyWinnersMovies: (movies: MoviesResponse[]) => void;
 };
 
 export const useMovieStore = create<State>((set) => ({
@@ -27,4 +29,6 @@ export const useMovieStore = create<State>((set) => ({
   studiosWithMostVictories: [],
   addManyStudiosWithMostVictories: (studios) =>
     set((state) => ({ studiosWithMostVictories: studios })),
+  winnersMovies: [],
+  addManyWinnersMovies: (movies) => set((state) => ({ winnersMovies: movies })),
 }));
