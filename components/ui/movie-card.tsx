@@ -2,7 +2,7 @@ import trophy from "@/public/trophy.svg";
 import winnerTrophy from "@/public/winnerTrophy.svg";
 
 import Image from "next/image";
-import Card from "./card";
+import { CardComponent } from "./styles/movie-card.styles";
 
 interface MovieCardProps {
   title: string;
@@ -22,7 +22,8 @@ const MovieCard: React.FC<MovieCardProps> = ({
   urlImage,
 }) => {
   return (
-    <Card
+    <CardComponent
+      imageUrl={urlImage}
       className="
       bg-movieCard
       border
@@ -81,7 +82,7 @@ const MovieCard: React.FC<MovieCardProps> = ({
           </div>
         </div>
       </div>
-    </Card>
+    </CardComponent>
   );
 };
 
