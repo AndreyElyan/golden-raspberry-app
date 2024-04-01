@@ -3,7 +3,7 @@ import { FlatList } from "@/components/flat-list";
 import Card from "@/components/ui/card";
 import Text from "@/components/ui/text";
 import Title from "@/components/ui/title";
-import { useMovieStore } from "@/store/zustand";
+import { useMovieStore } from "@/app/store/zustand";
 import type { MostSuccessfulStudios } from "@/types/Movies";
 import { getMostSuccessfulStudios } from "@/app/api/getMostSuccessfulStudios";
 import { studiosImages } from "./constants";

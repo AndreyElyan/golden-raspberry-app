@@ -6,7 +6,7 @@ import { years } from "@/utils/years";
 import { StyledInput, WrapperInput } from "./styles";
 import { getMovies, getMoviesBySearch } from "@/app/api";
 import { useDebounce } from "use-debounce";
-import { useMovieStore } from "@/store/zustand";
+import { useMovieStore } from "@/app/store/zustand";
 
 interface SearchMovieProps {
   isJustWinners: boolean;

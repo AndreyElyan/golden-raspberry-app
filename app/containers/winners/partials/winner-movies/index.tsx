@@ -1,6 +1,6 @@
 import { FlatList } from "@/components/flat-list";
 import MovieCard from "@/components/ui/movie-card";
-import { useMovieStore } from "@/store/zustand";
+import { useMovieStore } from "@/app/store/zustand";
 
 export default function WinnerMovies() {
   const { winnersMovies } = useMovieStore();

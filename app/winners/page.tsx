@@ -1,4 +1,4 @@
-import Winners from "@/containers/winners";
+import Winners from "@/app/containers/winners";
 import React from "react";
 
 const WinnersPage = () => {

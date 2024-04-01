@@ -4,7 +4,7 @@ import MovieCard from "@/components/ui/movie-card";
 import { getWinnersInTheSameYear } from "@/app/api/getWinnersInTheSameYear";
 import { FlatList } from "@/components/flat-list";
 import Title from "@/components/ui/title";
-import { useMovieStore } from "@/store/zustand";
+import { useMovieStore } from "@/app/store/zustand";
 import { WinnersEntity, WinnersInSameYearResponse } from "@/types/Movies";
 
 export default function TheySharedGoldenRaspberry() {

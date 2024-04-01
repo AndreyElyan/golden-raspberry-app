@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins as FontSans } from "next/font/google";
 import "./globals.css";
-import { cn } from "@/lib/utils";
+import { cn } from "@/app/utils";
 import NavigationMenu from "@/components/navigation-menu";
 
 const fontSans = FontSans({
