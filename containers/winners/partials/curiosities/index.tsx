@@ -12,14 +12,17 @@ export default function Curiosities() {
         title="Curious facts about the producers of the worst movies of the year"
       />
       <Card className="flex flex-row w-full items-center justify-between mt-4">
-        <Image
-          src={MatthewVaughnImage}
-          alt="Matthew Vaughn"
-          width={50}
-          height={50}
-          className="rounded-md"
-        />
-        <Title title="Matthew Vaughn" />
+        <div className="flex flex-row items-center">
+          <Image
+            src={MatthewVaughnImage}
+            alt="Matthew Vaughn"
+            width={50}
+            height={50}
+            className="rounded-md mr-4"
+          />
+          <Title title="Matthew Vaughn" />
+        </div>
+
         <div className="flex flex-row">
           <Text
             className="text-white"
@@ -32,15 +35,19 @@ export default function Curiosities() {
           />
         </div>
       </Card>
+
       <Card className="flex flex-row justify-between w-full items-center mt-4">
-        <Image
-          src={JoelSilverImage}
-          alt="Joel Silver"
-          width={50}
-          height={50}
-          className="rounded-md"
-        />
-        <Title title="Joel Silver" />
+        <div className="flex flex-row items-center">
+          <Image
+            src={JoelSilverImage}
+            alt="Joel Silver"
+            width={50}
+            height={50}
+            className="rounded-md mr-4"
+          />
+          <Title title="Joel Silver" />
+        </div>
+
         <div className="flex flex-row">
           <Text
             className="text-white ml-4"

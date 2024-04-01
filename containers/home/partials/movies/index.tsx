@@ -22,7 +22,7 @@ export default function Movies() {
             />
           )}
           ListEmptyComponent={() => (
-            <p className="text-white mt-8">{"Nenhum filme encontrado :("}</p>
+            <p className="text-white mt-8">{"No movie found :("}</p>
           )}
         />
       )}

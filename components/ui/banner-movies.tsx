@@ -3,12 +3,13 @@ import BannerImage from "@/public/banner-movies.svg";
 
 export const BannerMovies = () => {
   return (
-    <Image
-      src={BannerImage}
-      className="rounded-3xl shadow-xl"
-      alt="Banner with movies"
-      priority
-      width={700}
-    />
+    <div className="rounded-xl overflow-hidden">
+      <Image
+        src={BannerImage}
+        className="w-full"
+        alt="Banner with movies"
+        priority
+      />
+    </div>
   );
 };

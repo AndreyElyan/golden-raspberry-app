@@ -27,7 +27,7 @@ export default function RootLayout({
           fontSans.className,
         )}
       >
-        <main className="flex flex-col items-center">
+        <main className="max-w-7xl mx-auto py-8">
           <NavigationMenu />
           {children}
         </main>
