@@ -5,6 +5,7 @@ export interface MoviesResponse {
   studios: string;
   producers: string;
   winner: string;
+  urlImage?: string;
 }
 
 export interface WinnersInSameYearResponse {
@@ -18,6 +19,7 @@ export interface WinnersEntity {
   studios: string;
   producers: string;
   winner: string;
+  urlImage?: string;
 }
 
 export interface MostSuccessfulStudios {

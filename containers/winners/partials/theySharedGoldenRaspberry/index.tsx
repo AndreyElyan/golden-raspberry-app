@@ -46,6 +46,7 @@ export default function TheySharedGoldenRaspberry() {
               winner={data.winner === "yes"}
               producers={data.producers}
               studio={data.studios}
+              urlImage={data.urlImage}
             />
           );
         }}

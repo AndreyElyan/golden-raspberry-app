@@ -18,6 +18,7 @@ export default function WinnerMovies() {
               winner={data.winner === "yes"}
               producers={data.producers}
               studio={data.studios}
+              urlImage={data.urlImage}
             />
           )}
         />
