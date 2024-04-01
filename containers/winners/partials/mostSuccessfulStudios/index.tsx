@@ -6,6 +6,8 @@ import Title from "@/components/ui/title";
 import { useMovieStore } from "@/store/zustand";
 import type { MostSuccessfulStudios } from "@/types/Movies";
 import { getMostSuccessfulStudios } from "@/app/api/getMostSuccessfulStudios";
+import { studiosImages } from "./constants";
+import Image from "next/image";
 
 export default function MostSuccessfulStudios() {
   const {
@@ -31,6 +33,8 @@ export default function MostSuccessfulStudios() {
     studiosWithMostVictories,
   ]);
 
+  const images = studiosImages;
+
   return (
     <div>
       <Title
@@ -40,10 +44,16 @@ export default function MostSuccessfulStudios() {
       />
 
       <FlatList
-        items={studiosWithMostVictories.slice(0, 5)}
+        items={studiosWithMostVictories.slice(0, 3)}
         RenderItem={({ data }) => {
           return (
-            <Card className="flex flex-row w-full justify-between mt-4">
+            <Card className="flex flex-row w-full items-center justify-between mt-4">
+              <Image
+                src={images[data.studio]}
+                alt={data.studio}
+                width={50}
+                height={50}
+              />
               <Title title={data.studio} />
               <div className="flex flex-row">
                 <Text
