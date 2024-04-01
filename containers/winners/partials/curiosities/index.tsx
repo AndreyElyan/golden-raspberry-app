@@ -14,12 +14,12 @@ export default function Curiosities() {
         <div className="flex flex-row">
           <Text
             className="text-white"
-            text="Foi o produtor com o maior intervalo de"
+            text="He was the producer with the longest"
           />
           <p className="text-gray-300 mr-2 ml-2">|</p>
           <Text
             className="text-green-500 ml-2"
-            text="2002 até 2015"
+            text="2002 to 2015"
           />
         </div>
       </Card>
@@ -29,12 +29,12 @@ export default function Curiosities() {
         <div className="flex flex-row">
           <Text
             className="text-white"
-            text="Foi o produtor com o menor intervalo de"
+            text="He was the producer with the shortest"
           />
           <p className="text-gray-300 mr-2 ml-2">|</p>
           <Text
             className="text-green-500 ml-2"
-            text="1990 até 1991"
+            text="1990 to 1991"
           />
         </div>
       </Card>
