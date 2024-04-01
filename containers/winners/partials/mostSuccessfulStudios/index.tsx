@@ -31,11 +31,10 @@ export default function MostSuccessfulStudios() {
     studiosWithMostVictories,
   ]);
 
-  console.log(studiosWithMostVictories);
   return (
     <div>
       <Title
-        className="text-xl"
+        className="text-xl mt-6"
         title="The studios that won the most Golden Raspberries
 "
       />

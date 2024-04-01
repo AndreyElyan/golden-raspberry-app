@@ -7,7 +7,7 @@ export default function Curiosities() {
     <div>
       <Title
         className="text-xl mt-4"
-        title="Fatos Curiosos dos Produtores"
+        title="Curious facts about the producers of the worst movies of the year"
       />
       <Card className="flex flex-row w-full justify-between mt-4">
         <Title title="Matthew Vaughn" />

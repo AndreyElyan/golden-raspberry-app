@@ -6,7 +6,7 @@ export default function WinnerMovies() {
   const { winnersMovies } = useMovieStore();
 
   return (
-    <>
+    <div>
       {winnersMovies && (
         <FlatList
           items={winnersMovies}
@@ -20,11 +20,8 @@ export default function WinnerMovies() {
               studio={data.studios}
             />
           )}
-          ListEmptyComponent={() => (
-            <p className="text-white mt-8">{"Nenhum filme encontrado :("}</p>
-          )}
         />
       )}
-    </>
+    </div>
   );
 }
