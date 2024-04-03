@@ -53,6 +53,11 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 - [Tailwind CSS](https://tailwindcss.com/): Utility-first CSS framework.
 - [Zustand](https://zustand-demo.pmnd.rs): Bear necessities for global state.
 
+## Tests
+
+<img width="1473" alt="image" src="https://github.com/AndreyElyan/golden-raspberry-app/assets/46023665/6ec51478-4e11-4c0a-9281-58b06b4e146d">
+
+
 ## Figma
 
 - [Figma](https://www.figma.com/file/iJa8ViXUuZ20A4bUIoI0y3/Framboesa-de-Ouro?type=design&node-id=1-6&mode=design&t=0gNC9bmQaPSHANo9-0) - Golden Raspberry Design
