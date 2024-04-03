@@ -1,11 +1,11 @@
 import React from "react";
 
 interface FlatListProps {
-  items: any[];
+  items: any[] | null | undefined;
   RenderItem: ({ data, key }: { data: any; key: number }) => JSX.Element;
-  ListHeaderComponent?: () => JSX.Element;
-  ListFooterComponent?: () => JSX.Element;
-  ListEmptyComponent?: () => JSX.Element;
+  ListHeaderComponent?: () => JSX.Element | null;
+  ListFooterComponent?: () => JSX.Element | null;
+  ListEmptyComponent?: () => JSX.Element | null;
 }
 
 export const FlatList = ({

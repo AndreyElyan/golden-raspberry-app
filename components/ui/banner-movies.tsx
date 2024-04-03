@@ -8,6 +8,8 @@ export const BannerMovies = () => {
         src={BannerImage}
         className="w-full"
         alt="Banner with movies"
+        width={648}
+        height={400}
         priority
       />
     </div>

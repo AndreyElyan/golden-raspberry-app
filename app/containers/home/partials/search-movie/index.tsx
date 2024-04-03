@@ -72,6 +72,7 @@ export default function SearchMovie({ isJustWinners }: SearchMovieProps) {
             placeholder="Search by movie name"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
+            id="search-movie"
           />
         )}
       </WrapperInput>
